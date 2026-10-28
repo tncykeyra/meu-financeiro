@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/meu-financeiro/sw.js',{scope:'/meu-financeiro/'}).catch(()=>{/* Installation remains available without an offline cache. */})})}
