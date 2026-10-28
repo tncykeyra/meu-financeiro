@@ -27,3 +27,7 @@ Lançamento com descrição, valor, categoria e data de hoje automática. Parcel
 ## Instalar no celular
 
 Android: abra no Chrome e use Instalar no celular ou o menu do navegador. iPhone: Safari, Compartilhar, Adicionar à Tela de Início. Manifesto com ícones PNG 192 e 512, ícone maskable, apple-touch-icon e HTTPS. A instalação depende do suporte do navegador; não há publicação nas lojas.
+
+## Cores e lançamentos rápidos
+
+Cores do app permite escolher separadamente a cor geral, entradas e saídas, com 24 amostras e seletor livre. A preferência é salva junto aos dados privados de cada conta. Verde-claro e vermelho suave são o padrão. O texto alterna entre branco e preto para manter contraste. Atalhos recentes preenchem somente descrição e categoria; confirme o valor. Salvar e registrar outro limpa o formulário e mantém o tipo de registro.
