@@ -1,0 +1,3 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {parseAmount,today} from './entry-helpers.ts';
+test('Valores brasileiros com vírgula e centavos',()=>{assert.equal(parseAmount('12,90'),1290);assert.equal(parseAmount('1.250,50'),125050);assert.equal(parseAmount('R$ 35,00'),3500);assert.equal(parseAmount('12.90'),1290);assert.ok(Number.isNaN(parseAmount('12,345')));assert.ok(Number.isNaN(parseAmount('abc')))});
+test('Data automática usa calendário local do aparelho',()=>{const d=new Date();assert.equal(today(),`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`)});

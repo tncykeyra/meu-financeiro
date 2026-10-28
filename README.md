@@ -1,2 +1,25 @@
-# meu-financeiro
-Gestor financeiro pessoal e familiar com acesso pelo celular.
+# Meu Financeiro
+
+Aplicativo React/TypeScript responsivo para despesas, receitas, parcelas, metas, orçamentos, gráficos e relatório A4 em PDF. Educador financeiro por regras baseadas nos registros. Sem API paga de inteligência artificial.
+
+## Publicação independente
+
+Endereço previsto: https://tncykeyra.github.io/meu-financeiro/
+
+O GitHub Pages serve a pasta `docs` da branch `main`. O código-fonte fica na raiz. Não depende de sessão ou assinatura ChatGPT. O banco e o login são serviços Supabase separados, sujeitos às próprias condições e limites.
+
+## Executar e atualizar
+
+Instale Node.js 24 e pnpm 11. Execute `pnpm install --frozen-lockfile`, `pnpm test` e `pnpm build`. Para atualizar a publicação, substitua `docs` pelo conteúdo de `dist`, incluindo `.nojekyll`, e envie um commit.
+
+## Dados e segurança
+
+Apenas a URL e a chave publicável do Supabase são incluídas. A chave publicável identifica o app e não autoriza acesso aos dados de outras contas. A tabela finance_data usa RLS por auth.uid(). Nunca inclua service_role, senha do banco ou segredo OAuth no repositório.
+
+Sem login, os registros ficam neste navegador. Com login, os registros da conta ficam no Supabase; dados locais não são transferidos automaticamente. Exporte backups regularmente. O aplicativo não importa backups nem funciona completamente offline.
+
+No Supabase, autorize https://tncykeyra.github.io/meu-financeiro/ como URL de redirecionamento. O callback Google permanece https://hjmwdjmfetlfwrfgrols.supabase.co/auth/v1/callback. Configure o Google Cloud e a audiência do login conforme as contas que utilizarão o app.
+
+## Usabilidade
+
+Lançamento com descrição, valor, categoria e data de hoje automática. Parcelamento e detalhes aparecem quando necessários. Layout adaptado a celulares. Fechamento mensal manual; relatório PDF baixável e compartilhável pelo usuário.

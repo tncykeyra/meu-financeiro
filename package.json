@@ -1,0 +1,25 @@
+{
+  "name": "meu-financeiro",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "test": "node --experimental-strip-types --test src/finance.test.ts src/entry-helpers.test.ts"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "@supabase/supabase-js": "2.118.0",
+    "jspdf": "4.2.1",
+    "lucide-react": "0.468.0"
+  },
+  "devDependencies": {
+    "typescript": "5.9.2",
+    "vite": "8.3.5",
+    "@types/react": "19.1.16",
+    "@types/react-dom": "19.1.9"
+  },
+  "packageManager": "pnpm@11.25.0"
+}
