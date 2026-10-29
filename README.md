@@ -43,3 +43,7 @@ O calendário da fatura usa o mês de referência e fica separado do filtro de l
 Só o valor é obrigatório. Descrição opcional ganha o nome da categoria ao salvar em branco. Categoria sugerida por descrição/histórico é sempre editável. Data de hoje e status pago/recebido aparecem em botões compactos; parcelamento e detalhes são opcionais. O valor não é copiado dos atalhos recentes. Abertura e carregamento de conta usam uma animação abstrata de gráfico e carteira, sem atraso artificial nem cotação fictícia. Respeita a preferência de reduzir movimentos.
 
 O botão flutuante Lançar na tela inicial abre o cadastro rápido. O preenchimento usa regras locais e o histórico da própria conta; não utiliza IA externa, não cria lançamentos sem confirmação e não inventa categorias quando faltam informações.
+
+## Versão 1.12 — categoria visível e tour
+
+O seletor Categoria fica sempre à vista no lançamento. Uma escolha manual prevalece sobre sugestões da descrição. Tour de quatro passos: lançar, categorizar, menu/calendário e resumo/PDF. Aparece no primeiro acesso por conta neste navegador, pode ser dispensado e reaberto em Como usar. A marca de conclusão é local e separada por ID de usuário; os registros financeiros continuam privados no Supabase. O tour não modifica os dados.
