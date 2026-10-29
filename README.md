@@ -47,3 +47,7 @@ O botão flutuante Lançar na tela inicial abre o cadastro rápido. O preenchime
 ## Versão 1.12 — categoria visível e tour
 
 O seletor Categoria fica sempre à vista no lançamento. Uma escolha manual prevalece sobre sugestões da descrição. Tour de quatro passos: lançar, categorizar, menu/calendário e resumo/PDF. Aparece no primeiro acesso por conta neste navegador, pode ser dispensado e reaberto em Como usar. A marca de conclusão é local e separada por ID de usuário; os registros financeiros continuam privados no Supabase. O tour não modifica os dados.
+
+## Versão 1.13 — ícones de categoria
+
+Categorias no lançamento aparecem como cartões com ícone, nome e seleção marcada. Seis opções iniciais e Ver todas para expandir. Ícones também na lista de categorias e nos lançamentos. Categorias personalizadas recebem um ícone por palavra-chave ou um símbolo neutro, mantendo sempre o nome legível.
