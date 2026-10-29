@@ -63,3 +63,7 @@ Botão Editar explícito em cada registro salvo, com formulário preenchido e pr
 
 ## Versão 1.18
 Despesas agrupadas por categoria, com total, pago e a pagar; entradas separadas. Filtro de categoria. Quanto resta considera saldo anterior + recebido − pago − despesas pendentes do período; filtros não alteram o cálculo. Entradas pendentes e parcelas futuras não antecipam movimentações de caixa. Objetivos são acompanhados à parte.
+
+
+## Versão 1.19
+Entradas e Despesas têm páginas e itens de menu próprios. Atalhos do painel abrem a página correspondente. As despesas mostram primeiro categorias e totais; toque para expandir. Cada página filtra apenas seu tipo, com busca, categoria e situação independentes ao navegar. Quanto resta permanece calculado com todos os registros do período, incluindo despesas pendentes.
