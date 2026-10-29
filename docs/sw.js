@@ -1,6 +1,6 @@
-const CACHE='meu-financeiro-3e2bab55d9d9';
+const CACHE='meu-financeiro-06f954c28a52';
 const BASE=new URL('./',self.location.href);
-const ASSETS=["apple-touch-icon.png","assets/html2canvas-De3i0af0.js","assets/index-CWP-zR6F.js","assets/index-pKywCkJT.css","assets/index.es-CjjVvWou.js","assets/pdf-DmnrR2DW.js","assets/purify.es-Dqk5qvad.js","icon-192.png","icon-512.png","icon-maskable.png","icon.svg","index.html","manifest.webmanifest"].map(path=>new URL(path,BASE).href);
+const ASSETS=["apple-touch-icon.png","assets/html2canvas-CcPjvRYB.js","assets/index-CdNjow8N.js","assets/index-D-0u_v0w.css","assets/index.es-DdvqtC61.js","assets/pdf-CjJG1OZL.js","assets/purify.es-Dqk5qvad.js","icon-192.png","icon-512.png","icon-maskable.png","icon.svg","index.html","manifest.webmanifest"].map(path=>new URL(path,BASE).href);
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('meu-financeiro-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',event=>{const request=event.request;const url=new URL(request.url);if(request.method!=='GET'||url.origin!==BASE.origin||!url.pathname.startsWith(BASE.pathname)||request.headers.has('authorization'))return;
