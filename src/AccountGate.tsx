@@ -1,9 +1,11 @@
 import React,{useState} from 'react';
 import {supabase} from './db';
 import {APP_VERSION} from './version';
+import FinanceLoader from './FinanceLoader';
 import InstallApp from './InstallApp';
 export default function AccountGate({checking,loading,error,onError}:{checking:boolean,loading:boolean,error:string,onError:(message:string)=>void}){
  const [busy,setBusy]=useState(false);
  async function login(){if(!supabase)return;setBusy(true);onError('');try{const {error}=await supabase.auth.signInWithOAuth({provider:'google',options:{redirectTo:new URL('/meu-financeiro/',window.location.origin).href,queryParams:{prompt:'select_account'}}});if(error)throw error}catch{onError('Não foi possível entrar. Confira sua conexão e tente novamente.');setBusy(false)}}
+ if((checking||loading||busy)&&!error)return <FinanceLoader label={busy?'Conectando sua conta com segurança':checking?'Preparando seu espaço financeiro':'Carregando apenas os seus registros'}/>;
  return <div className="login-page"><section className="login-card"><img src="/meu-financeiro/icon.svg" width="64" height="64" alt=""/><p className="eyebrow">MEU FINANCEIRO <small>versão {APP_VERSION}</small></p><h1>Seu dinheiro, seu espaço.</h1><p>Entre com sua conta Google para cuidar das suas finanças. Cada pessoa tem seus próprios registros, separados e protegidos.</p>{error&&<p role="alert" className="alert">{error}</p>}{checking?<p role="status">Verificando sua conta…</p>:loading?<><p role="status">{error?'Seus dados continuam protegidos.':'Carregando apenas os seus registros…'}</p>{error&&<div className="actions"><button className="primary" onClick={()=>location.reload()}>Tentar novamente</button><button className="secondary" onClick={async()=>{const result=await supabase?.auth.signOut({scope:'local'});if(result?.error)onError('Não foi possível sair. Tente novamente.')}}>Sair da conta</button></div>}</>:<button className="google-login wide" disabled={busy||!supabase} onClick={login}><span className="google-g">G</span>{busy?'Conectando…':'Continuar com o Google'}</button>}<p className="login-note">Use a mesma conta no celular e no computador para acessar seus dados. É necessário internet para entrar e salvar.</p><InstallApp/></section></div>
 }

@@ -37,3 +37,9 @@ Cores do app permite editar 24 grupos de cores da interface, incluindo fundo, ca
 Meu calendário guarda por conta o dia inicial do período, fechamento e vencimento de referência, número do dia útil de recebimento, sábados e feriados informados. Exemplo: início dia 15, fechamento 14, vencimento 20. O período vai do dia 15 ao dia 14 seguinte e se aplica a filtros, gráficos, orçamento, fechamento e PDF. Dias 29–31 são ajustados em meses curtos. Mude o início apenas após reabrir todos os períodos fechados.
 
 O calendário da fatura usa o mês de referência e fica separado do filtro de lançamentos. Não consulta Mercado Pago, não calcula juros/rendimentos e não ajusta vencimentos bancários automaticamente. Cartões podem guardar seu próprio dia de fechamento e vencimento. O menu do celular abre pela carteira, fecha por toque fora/Esc e contém conta, calendário, cores e instalação. Os botões de despesa e recebimento ficam acessíveis no resumo e na lista de lançamentos.
+
+## Versão 1.11 — lançamento simples
+
+Só o valor é obrigatório. Descrição opcional ganha o nome da categoria ao salvar em branco. Categoria sugerida por descrição/histórico é sempre editável. Data de hoje e status pago/recebido aparecem em botões compactos; parcelamento e detalhes são opcionais. O valor não é copiado dos atalhos recentes. Abertura e carregamento de conta usam uma animação abstrata de gráfico e carteira, sem atraso artificial nem cotação fictícia. Respeita a preferência de reduzir movimentos.
+
+O botão flutuante Lançar na tela inicial abre o cadastro rápido. O preenchimento usa regras locais e o histórico da própria conta; não utiliza IA externa, não cria lançamentos sem confirmação e não inventa categorias quando faltam informações.
