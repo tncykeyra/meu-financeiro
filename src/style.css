@@ -25,3 +25,5 @@ aside{background:var(--sidebar)}header{background:var(--header)}body,:root{backg
 @media(prefers-reduced-motion:reduce){.app aside{transition:none}}
 
 @media(max-width:760px){.app aside{visibility:hidden;pointer-events:none}.app.menu-open aside{visibility:visible;pointer-events:auto}.app .title-row .primary{display:inline-flex}.quick-entry-actions{position:fixed;bottom:10px;left:16px;right:16px;margin:0;z-index:21;padding:6px;border:1px solid var(--border);border-radius:16px;background:var(--surface)}.quick-entry-actions button{box-shadow:none}.app.menu-open .quick-entry-actions{visibility:hidden}}
+
+@media(max-width:760px){.month-row{display:grid;grid-template-columns:1fr;gap:10px}.month-picker{width:100%;max-width:290px;justify-content:space-between}.month-picker input{width:180px;text-align:center}.cycle-range{text-align:left;max-width:100%;font-size:12px;gap:3px}.cycle-range small{font-size:10px}.payday-timeline{margin-top:20px}.app .title-row .primary{min-width:44px}.entry-submit{bottom:-22px}.entry-submit .wide{width:100%}}
