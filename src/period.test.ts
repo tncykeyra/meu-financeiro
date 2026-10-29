@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {periodBounds,periodKey,businessPayday,paymentTimeline,defaultCycle,validDate} from './period.ts';import {monthEntries,initial} from './finance.ts';
+import {periodBounds,periodKey,businessPayday,paymentTimeline,defaultCycle,validDate} from './period.ts';import {monthEntries,initial,periodSummary} from './finance.ts';
 test('Dia 15 separa os períodos sem perder os dias 14 e 15',()=>{assert.deepEqual(periodBounds('2026-10',15),{start:'2026-10-15',end:'2026-11-14'});assert.equal(periodKey('2026-10-14',15),'2026-09');assert.equal(periodKey('2026-10-15',15),'2026-10');assert.equal(periodKey('2026-01-01',15),'2025-12')});
 test('Dia 31 ajusta fevereiro e não sobrepõe períodos',()=>{assert.deepEqual(periodBounds('2027-01',31),{start:'2027-01-31',end:'2027-02-27'});assert.deepEqual(periodBounds('2027-02',31),{start:'2027-02-28',end:'2027-03-30'});assert.equal(periodKey('2027-02-28',31),'2027-02')});
 test('Dia 1 preserva o mês civil anterior',()=>assert.deepEqual(periodBounds('2026-12'),{start:'2026-12-01',end:'2026-12-31'}));
@@ -8,3 +8,5 @@ test('Fatura distingue fechamento 14, vencimento 20 e intervalo de caixa',()=>{c
 test('Filtro de lançamentos aplica o mês financeiro a receitas e despesas',()=>{const entry={id:'a',date:'2026-11-14',description:'Teste',amount:100,kind:'income' as const,category:'Salário',paid:true,fixed:false,card:''};const s={...initial,cycle:{...defaultCycle,startDay:15},entries:[entry,{...entry,id:'b',date:'2026-11-15'}]};assert.deepEqual(monthEntries(s,'2026-10').map(e=>e.id),['a']);assert.deepEqual(monthEntries(s,'2026-11').map(e=>e.id),['b'])});
 
 test('Feriados rejeitam datas inexistentes',()=>{assert.equal(validDate('2026-02-30'),false);assert.equal(validDate('2026-11-02'),true);assert.equal(validDate('02/11/2026'),false)});
+
+test('Salário recebido antes do dia 15 continua no saldo disponível',()=>{const base={description:'Teste',category:'Outros',paid:true,fixed:false,card:''};const state={...initial,cycle:{...defaultCycle,startDay:15},entries:[{...base,id:'salario',kind:'income' as const,date:'2026-10-06',amount:500000},{...base,id:'fatura',kind:'expense' as const,date:'2026-10-20',amount:120000},{...base,id:'futuro',kind:'income' as const,date:'2026-11-15',amount:999999}]};assert.deepEqual(periodSummary(state,'2026-10'),{opening:500000,balance:380000,forecast:380000})});
