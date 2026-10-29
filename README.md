@@ -59,3 +59,7 @@ O seletor nativo de mês foi substituído por uma janela do app com mês/ano, pr
 
 ## Versão 1.16
 Botão Editar explícito em cada registro salvo, com formulário preenchido e preservação da posição na lista. Períodos fechados orientam reabertura. No celular os registros são cartões sem rolagem horizontal. Listas maiores mostram 30 registros por vez; resumos continuam considerando todos. Cálculos do painel reutilizados entre renderizações e busca adiada para não travar a digitação. Telas secundárias carregam sob demanda. O primeiro cache PWA guarda apenas arquivos essenciais, sem antecipar o download do gerador de PDF. Fonte do sistema evita chamada externa de fontes.
+
+
+## Versão 1.18
+Despesas agrupadas por categoria, com total, pago e a pagar; entradas separadas. Filtro de categoria. Quanto resta considera saldo anterior + recebido − pago − despesas pendentes do período; filtros não alteram o cálculo. Entradas pendentes e parcelas futuras não antecipam movimentações de caixa. Objetivos são acompanhados à parte.
