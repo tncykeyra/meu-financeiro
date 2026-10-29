@@ -55,3 +55,7 @@ Categorias no lançamento aparecem como cartões com ícone, nome e seleção ma
 ## Versão 1.14 — seleção de período
 
 O seletor nativo de mês foi substituído por uma janela do app com mês/ano, prévia, botão X, Fechar e Aplicar período. Fechar, Escape e toque fora descartam a seleção provisória. Só Aplicar período troca o filtro. Setas de mês anterior/próximo continuam rápidas. Meu calendário tem botão Fechar calendário para voltar ao resumo.
+
+
+## Versão 1.16
+Botão Editar explícito em cada registro salvo, com formulário preenchido e preservação da posição na lista. Períodos fechados orientam reabertura. No celular os registros são cartões sem rolagem horizontal. Listas maiores mostram 30 registros por vez; resumos continuam considerando todos. Cálculos do painel reutilizados entre renderizações e busca adiada para não travar a digitação. Telas secundárias carregam sob demanda. O primeiro cache PWA guarda apenas arquivos essenciais, sem antecipar o download do gerador de PDF. Fonte do sistema evita chamada externa de fontes.

@@ -1,2 +1,2 @@
 import { defineConfig } from 'vite';
-export default defineConfig({ base: '/meu-financeiro/' });
+export default defineConfig({ base: '/meu-financeiro/', build: {manifest:true} });
