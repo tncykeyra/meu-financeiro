@@ -11,7 +11,7 @@
     "name": "rolldown-runtime"
   },
   "index.html": {
-    "file": "assets/index-BjXlXZnp.js",
+    "file": "assets/index-mw7fk21R.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -27,11 +27,11 @@
       "src/ThemePicker.tsx"
     ],
     "css": [
-      "assets/index-Bx8gZt6h.css"
+      "assets/index-CIt-Py3r.css"
     ]
   },
   "node_modules/.pnpm/canvg@3.0.11/node_modules/canvg/lib/index.es.js": {
-    "file": "assets/index.es-B4beoNqN.js",
+    "file": "assets/index.es-DZ0QNGaN.js",
     "name": "index.es",
     "src": "node_modules/.pnpm/canvg@3.0.11/node_modules/canvg/lib/index.es.js",
     "isDynamicEntry": true,
@@ -56,7 +56,7 @@
     ]
   },
   "src/CategoryManager.tsx": {
-    "file": "assets/CategoryManager-DW94EHE9.js",
+    "file": "assets/CategoryManager-CFzXMLBz.js",
     "name": "CategoryManager",
     "src": "src/CategoryManager.tsx",
     "isDynamicEntry": true,
@@ -67,7 +67,7 @@
     ]
   },
   "src/CyclePanel.tsx": {
-    "file": "assets/CyclePanel-B4ZJNKyJ.js",
+    "file": "assets/CyclePanel-DQSG0Qv5.js",
     "name": "CyclePanel",
     "src": "src/CyclePanel.tsx",
     "isDynamicEntry": true,
@@ -78,7 +78,7 @@
     ]
   },
   "src/QuickTour.tsx": {
-    "file": "assets/QuickTour-DuZmZ8hD.js",
+    "file": "assets/QuickTour-CZKV0GDM.js",
     "name": "QuickTour",
     "src": "src/QuickTour.tsx",
     "isDynamicEntry": true,
@@ -89,7 +89,7 @@
     ]
   },
   "src/ThemePicker.tsx": {
-    "file": "assets/ThemePicker-ConErc9C.js",
+    "file": "assets/ThemePicker-pcFpq6K-.js",
     "name": "ThemePicker",
     "src": "src/ThemePicker.tsx",
     "isDynamicEntry": true,
@@ -100,7 +100,7 @@
     ]
   },
   "src/pdf.ts": {
-    "file": "assets/pdf-iS41hJkm.js",
+    "file": "assets/pdf-xXMgpGSQ.js",
     "name": "pdf",
     "src": "src/pdf.ts",
     "isDynamicEntry": true,
