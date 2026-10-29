@@ -51,3 +51,7 @@ O seletor Categoria fica sempre à vista no lançamento. Uma escolha manual prev
 ## Versão 1.13 — ícones de categoria
 
 Categorias no lançamento aparecem como cartões com ícone, nome e seleção marcada. Seis opções iniciais e Ver todas para expandir. Ícones também na lista de categorias e nos lançamentos. Categorias personalizadas recebem um ícone por palavra-chave ou um símbolo neutro, mantendo sempre o nome legível.
+
+## Versão 1.14 — seleção de período
+
+O seletor nativo de mês foi substituído por uma janela do app com mês/ano, prévia, botão X, Fechar e Aplicar período. Fechar, Escape e toque fora descartam a seleção provisória. Só Aplicar período troca o filtro. Setas de mês anterior/próximo continuam rápidas. Meu calendário tem botão Fechar calendário para voltar ao resumo.
