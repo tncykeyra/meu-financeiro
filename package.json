@@ -1,12 +1,12 @@
 {
   "name": "meu-financeiro",
-  "version": "1.0.0",
+  "version": "1.10.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build && node scripts/build-pwa.mjs",
-    "test": "node --experimental-strip-types --test src/finance.test.ts src/entry-helpers.test.ts src/theme.test.ts"
+    "test": "node --experimental-strip-types --test src/finance.test.ts src/entry-helpers.test.ts src/theme.test.ts src/period.test.ts"
   },
   "dependencies": {
     "react": "19.3.1",

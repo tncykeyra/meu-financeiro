@@ -31,3 +31,9 @@ Android: abra no Chrome e use Instalar no celular ou o menu do navegador. iPhone
 ## Cores e lançamentos rápidos
 
 Cores do app permite editar 24 grupos de cores da interface, incluindo fundo, cartões, menu, cabeçalho, textos, bordas, entradas, saídas, botões, alertas e cinco cores de gráfico, com 24 amostras e seletor livre. A preferência é salva junto aos dados privados de cada conta. Não há botão de combinação verde/vermelho. Restaurar padrão repõe o tema inicial para prévia, antes de aplicar. Ao mudar a cor de entradas, saídas ou botões, o texto é ajustado para contraste e também pode ser personalizado. A interface avisa quando o contraste escolhido fica baixo. O tema completo é salvo na conta e reaplicado antes de mostrar o painel em novos acessos. Atalhos recentes preenchem somente descrição e categoria; confirme o valor. Salvar e registrar outro limpa o formulário e mantém o tipo de registro.
+
+## Versão 1.10 — mês financeiro e menu mobile
+
+Meu calendário guarda por conta o dia inicial do período, fechamento e vencimento de referência, número do dia útil de recebimento, sábados e feriados informados. Exemplo: início dia 15, fechamento 14, vencimento 20. O período vai do dia 15 ao dia 14 seguinte e se aplica a filtros, gráficos, orçamento, fechamento e PDF. Dias 29–31 são ajustados em meses curtos. Mude o início apenas após reabrir todos os períodos fechados.
+
+O calendário da fatura usa o mês de referência e fica separado do filtro de lançamentos. Não consulta Mercado Pago, não calcula juros/rendimentos e não ajusta vencimentos bancários automaticamente. Cartões podem guardar seu próprio dia de fechamento e vencimento. O menu do celular abre pela carteira, fecha por toque fora/Esc e contém conta, calendário, cores e instalação. Os botões de despesa e recebimento ficam acessíveis no resumo e na lista de lançamentos.
