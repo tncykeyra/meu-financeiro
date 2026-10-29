@@ -2,7 +2,7 @@ import {cycleSettings,periodBounds} from './period.ts';
 export type Entry={id:string;description:string;amount:number;date:string;kind:'income'|'expense';category:string;paid:boolean;fixed:boolean;card:string;group?:string};
 export type Card={id:string;name:string;limit:number;day:number;closingDay?:number};
 export type Goal={id:string;name:string;target:number;saved:number};
-export type State={cycle?:import('./period').CycleSettings;theme?:import('./theme').Theme;entries:Entry[];categories:string[];cards:Card[];budgets:Record<string,number>;goals:Goal[];closed:Record<string,{at:string;entries:Entry[]}>};
+export type State={categoryIcons?:Record<string,string>;cycle?:import('./period').CycleSettings;theme?:import('./theme').Theme;entries:Entry[];categories:string[];cards:Card[];budgets:Record<string,number>;goals:Goal[];closed:Record<string,{at:string;entries:Entry[]}>};
 export const initial:State={entries:[],categories:['Mercado e feira','Moradia','Água','Luz','Internet','Escola','Saúde','Combustível','Pedágio','Passeios','Delivery','Outros','Salário'],cards:[],budgets:{},goals:[],closed:{}};
 export const money=(c:number)=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(c/100);
 export function monthEntries(s:State,m:string){const {start,end}=periodBounds(m,cycleSettings(s.cycle).startDay);return s.entries.filter(e=>e.date>=start&&e.date<=end)}
