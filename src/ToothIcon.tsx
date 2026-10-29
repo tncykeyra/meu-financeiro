@@ -1,0 +1,2 @@
+import React from 'react';
+export default function ToothIcon({size=24,...props}:React.SVGProps<SVGSVGElement>&{size?:number|string}){return <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M12 5C9 2 5 2 4 6c-1 3 1 5 2 8 .8 3 1.3 7 3 7 1.8 0 1-7 3-7s1.2 7 3 7c1.7 0 2.2-4 3-7 1-3 3-5 2-8-1-4-5-4-8-1Z"/><path d="M9 4c1 1 2 2 4 2"/></svg>}
